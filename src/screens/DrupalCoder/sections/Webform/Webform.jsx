@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import "./style.css";
 
 export const Webform = () => {
+    const [params, setParams] = useSearchParams();
+
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -15,33 +18,96 @@ export const Webform = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
+    /** ---------------------------- 
+     *  ЗАГРУЗКА СОХРАНЁННЫХ ДАННЫХ
+     * ----------------------------- */
+    useEffect(() => {
+        const saved = localStorage.getItem("formData");
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                setFormData((prev) => ({ ...prev, ...parsed }));
+            } catch {}
+        }
+
+        // Подгрузка значений из URL (?name=...&email=...)
+        const urlData = {};
+        ["name", "phone", "email", "comment", "consent"].forEach((key) => {
+            if (params.get(key)) {
+                urlData[key] = key === "consent" ? params.get(key) === "true" : params.get(key);
+            }
+        });
+
+        if (Object.keys(urlData).length > 0) {
+            setFormData((prev) => ({ ...prev, ...urlData }));
+        }
+    }, []);
+
+    /** ---------------------------- 
+     *  СИНХРОНИЗАЦИЯ ПОЛЕЙ
+     *  LocalStorage + URL
+     * ----------------------------- */
+    const syncState = (newData) => {
+        const updated = { ...formData, ...newData };
+
+        // LocalStorage
+        localStorage.setItem("formData", JSON.stringify(updated));
+
+        // URL
+        Object.entries(updated).forEach(([key, value]) => {
+            params.set(key, value);
+        });
+
+        setParams(params);
+    };
+
+    /** ---------------------------- 
+     *  ИЗМЕНЕНИЕ ПОЛЕЙ
+     * ----------------------------- */
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
+
+        const newValue = type === "checkbox" ? checked : value;
+
+        const updated = {
+            ...formData,
+            [name]: newValue,
+        };
+
+        setFormData(updated);
+        syncState({ [name]: newValue });
+
         if (errors[name]) {
             setErrors((prev) => ({ ...prev, [name]: "" }));
         }
     };
 
+    /** ---------------------------- 
+     *  ВАЛИДАЦИЯ ФОРМЫ
+     * ----------------------------- */
     const validateForm = () => {
         const newErrors = {};
         if (!formData.name.trim()) newErrors.name = "Введите ваше имя";
         if (!formData.phone.trim()) newErrors.phone = "Введите телефон";
+
         if (!formData.email.trim()) {
             newErrors.email = "Введите email";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = "Неверный формат email";
         }
+
         if (!formData.consent) newErrors.consent = "Необходимо согласие";
+
         return newErrors;
     };
 
+    /** ---------------------------- 
+     *  ОТПРАВКА ФОРМЫ
+     * ----------------------------- */
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newErrors = validateForm();
+
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             return;
@@ -54,13 +120,17 @@ export const Webform = () => {
 
         setTimeout(() => {
             setSubmitSuccess(false);
-            setFormData({
+
+            const cleared = {
                 name: "",
                 phone: "",
                 email: "",
                 comment: "",
                 consent: false,
-            });
+            };
+
+            setFormData(cleared);
+            syncState(cleared);
         }, 3000);
     };
 
@@ -78,6 +148,7 @@ export const Webform = () => {
                 src="https://c.animaapp.com/mixkm5sjC7HSqN/img/d.svg"
             />
 
+            {/* Контакты */}
             <div className="contacts">
                 <p className="text-wrapper">Оставить заявку на поддержку сайта</p>
 
@@ -90,17 +161,16 @@ export const Webform = () => {
 
                 <div className="phone">
                     <div className="phone-line" />
-
                     <div className="text-wrapper-2">8 800 222-26-73</div>
                 </div>
 
                 <div className="mail">
                     <div className="mail-2" />
-
                     <div className="text-wrapper-3">info@drupal-coder.ru</div>
                 </div>
             </div>
 
+            {/* Футер */}
             <footer className="footer">
                 <img
                     className="vector"
@@ -110,13 +180,13 @@ export const Webform = () => {
 
                 <div className="group">
                     <p className="p">Проект ООО «Инитлаб», Краснодар, Россия.</p>
-
                     <p className="text-wrapper-4">
                         Drupal является зарегистрированной торговой маркой Dries Buytaert.
                     </p>
                 </div>
             </footer>
 
+            {/* Форма */}
             <form className="form" onSubmit={handleSubmit}>
                 {submitSuccess && (
                     <motion.div
@@ -128,6 +198,7 @@ export const Webform = () => {
                     </motion.div>
                 )}
 
+                {/* Имя */}
                 <div className="input-empty">
                     <input
                         type="text"
@@ -135,11 +206,12 @@ export const Webform = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Ваше имя"
-                        className={`form-input ${errors.name ? 'error' : ''}`}
+                        className={`form-input ${errors.name ? "error" : ""}`}
                     />
                     {errors.name && <span className="error-text-inline">{errors.name}</span>}
                 </div>
 
+                {/* Телефон */}
                 <div className="input-empty-2">
                     <input
                         type="tel"
@@ -147,11 +219,12 @@ export const Webform = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Телефон"
-                        className={`form-input ${errors.phone ? 'error' : ''}`}
+                        className={`form-input ${errors.phone ? "error" : ""}`}
                     />
                     {errors.phone && <span className="error-text-inline">{errors.phone}</span>}
                 </div>
 
+                {/* Email */}
                 <div className="input-empty-3">
                     <input
                         type="email"
@@ -159,22 +232,24 @@ export const Webform = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="E-mail"
-                        className={`form-input ${errors.email ? 'error' : ''}`}
+                        className={`form-input ${errors.email ? "error" : ""}`}
                     />
                     {errors.email && <span className="error-text-inline">{errors.email}</span>}
                 </div>
 
+                {/* Комментарий */}
                 <div className="input-empty-4">
-          <textarea
-              name="comment"
-              value={formData.comment}
-              onChange={handleChange}
-              placeholder="Ваш комментарий"
-              className="form-textarea"
-              rows="4"
-          />
+                    <textarea
+                        name="comment"
+                        value={formData.comment}
+                        onChange={handleChange}
+                        placeholder="Ваш комментарий"
+                        className="form-textarea"
+                        rows="4"
+                    />
                 </div>
 
+                {/* Чекбокс */}
                 <div className="checkbox-wrapper">
                     <label className="checkbox">
                         <input
@@ -182,17 +257,19 @@ export const Webform = () => {
                             name="consent"
                             checked={formData.consent}
                             onChange={handleChange}
-                            style={{ display: 'none' }}
+                            style={{ display: "none" }}
                         />
-                        <div className={`checked-icon ${formData.consent ? 'checked' : ''}`}>
-                            {formData.consent && '✓'}
+                        <div className={`checked-icon ${formData.consent ? "checked" : ""}`}>
+                            {formData.consent && "✓"}
                         </div>
                         <p className="text-wrapper-7">
                             Отправляя заявку, я даю согласие на обработку своих персональных
                             данных
                         </p>
                     </label>
-                    {errors.consent && <span className="error-text-inline">{errors.consent}</span>}
+                    {errors.consent && (
+                        <span className="error-text-inline">{errors.consent}</span>
+                    )}
                 </div>
 
                 <motion.button
@@ -203,7 +280,7 @@ export const Webform = () => {
                     whileTap={{ scale: 0.95 }}
                 >
                     <div className="text-wrapper-8">
-                        {isSubmitting ? 'ОТПРАВКА...' : 'ОСТАВИТЬ ЗАЯВКУ!'}
+                        {isSubmitting ? "ОТПРАВКА..." : "ОСТАВИТЬ ЗАЯВКУ!"}
                     </div>
                 </motion.button>
             </form>
