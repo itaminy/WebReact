@@ -1,0 +1,533 @@
+.header {
+    background: linear-gradient(
+            233deg,
+            rgba(255, 255, 255, 0.55) 0%,
+            rgba(255, 255, 255, 0) 100%
+    ), linear-gradient(0deg, rgba(57, 64, 71, 1) 0%, rgba(57, 64, 71, 1) 100%);
+    background-color: transparent;
+    height: 650px;
+    left: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            233deg,
+            rgba(4, 6, 19, 0.7) 0%,
+            rgba(4, 6, 19, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+.header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.header .rectangle-13 {
+    height: 650px;
+    left: 3px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1437px;
+}
+
+.header .image-14 {
+    height: 650px;
+    left: 3px;
+    position: absolute;
+    top: 0;
+    width: 1437px;
+}
+
+.header .druplicon {
+    height: 742px;
+    left: 3px;
+    position: absolute;
+    top: 0;
+    width: 764px;
+}
+
+.header .text-wrapper-74 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    right: 211px;
+    top: 37px;
+    white-space: nowrap;
+}
+
+.header .text-wrapper-75 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    right: 151px;
+    top: 37px;
+    white-space: nowrap;
+}
+
+.header .group-18 {
+    height: 19px;
+    left: 130px;
+    position: absolute;
+    top: 34px;
+    width: 137px;
+}
+
+.header .text-wrapper-76 {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: calc(50.00% - 392px);
+    letter-spacing: 0.72px;
+    line-height: 10px;
+    position: absolute;
+    top: 39px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .text-wrapper-76:hover {
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .text-wrapper-77 {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: calc(50.00% - 135px);
+    letter-spacing: 0.72px;
+    line-height: 10px;
+    opacity: 0.8;
+    position: absolute;
+    top: 39px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .text-wrapper-77:hover {
+    opacity: 1;
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .text-wrapper-78 {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: calc(50.00% - 7px);
+    letter-spacing: 0.72px;
+    line-height: 10px;
+    opacity: 0.8;
+    position: absolute;
+    top: 39px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .text-wrapper-78:hover {
+    opacity: 1;
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .text-wrapper-79 {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: calc(50.00% + 79px);
+    letter-spacing: 0.72px;
+    line-height: 10px;
+    opacity: 0.8;
+    position: absolute;
+    top: 39px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .text-wrapper-79:hover {
+    opacity: 1;
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .text-wrapper-80 {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: calc(50.00% - 221px);
+    letter-spacing: 0.72px;
+    line-height: 10px;
+    opacity: 0.8;
+    position: absolute;
+    top: 39px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .text-wrapper-80:hover {
+    opacity: 1;
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .arrow-lang {
+    height: 6px;
+    position: absolute;
+    right: 132px;
+    top: 41px;
+    width: 8px;
+}
+
+.header .group-19 {
+    height: 306px;
+    left: 130px;
+    position: absolute;
+    top: 190px;
+    width: 510px;
+}
+
+.header .CMS-drupal {
+    bottom: 115px;
+    color: var(--white);
+    font-family: "Montserrat", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 28px;
+    opacity: 0.8;
+    position: absolute;
+    width: 486px;
+}
+
+.header .text-wrapper-81 {
+    align-items: center;
+    bottom: 186px;
+    color: var(--white);
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 52px;
+    font-weight: 700;
+    height: 120px;
+    justify-content: center;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 60px;
+    position: absolute;
+    width: 506px;
+}
+
+.header .group-20 {
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 246px;
+    width: 222px;
+}
+
+.header .rectangle-14 {
+    border: 2px solid;
+    border-color: #f14d34;
+    border-radius: 5px;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 220px;
+}
+
+.header .text-wrapper-82 {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    height: 12px;
+    justify-content: center;
+    left: 1px;
+    letter-spacing: 0.72px;
+    line-height: 12px;
+    position: absolute;
+    text-align: center;
+    top: 24px;
+    white-space: nowrap;
+    width: 219px;
+}
+
+.header .group-21 {
+    height: 292px;
+    left: 733px;
+    position: absolute;
+    top: 204px;
+    width: 597px;
+}
+
+.header .factoid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    left: 413px;
+    position: absolute;
+    top: 212px;
+    width: 180px;
+}
+
+.header .text-wrapper-83 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    flex: 1;
+    font-family: "Montserrat", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 14px;
+    max-height: 29px;
+}
+
+.header .text-wrapper-84 {
+    color: var(--white);
+    flex: 1;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 31px;
+    max-height: 30px;
+    opacity: 0.7;
+}
+
+.header .factoid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    left: 200px;
+    position: absolute;
+    top: 34px;
+    width: 180px;
+}
+
+.header .text-wrapper-85 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    flex: 1;
+    font-family: "Montserrat", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 13px;
+    margin-right: 1px;
+    max-height: 29px;
+}
+
+.header .element-11 {
+    color: var(--white);
+    flex: 1;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 13px;
+    margin-right: 18px;
+    max-height: 45px;
+    opacity: 0.7;
+}
+
+.header .factoid-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    left: 200px;
+    position: absolute;
+    top: 212px;
+    width: 180px;
+}
+
+.header .text-wrapper-86 {
+    color: var(--white);
+    flex: 1;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 13px;
+    margin-right: 18px;
+    max-height: 30px;
+    opacity: 0.7;
+}
+
+.header .factoid-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    left: 413px;
+    position: absolute;
+    top: 34px;
+    width: 180px;
+}
+
+.header .factoid-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    left: 13px;
+    position: absolute;
+    top: 212px;
+    width: 180px;
+}
+
+.header .rectangle-15 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 200px;
+    position: absolute;
+    top: 32px;
+    width: 3px;
+}
+
+.header .rectangle-16 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 400px;
+    position: absolute;
+    top: 32px;
+    width: 3px;
+}
+
+.header .rectangle-17 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 208px;
+    width: 3px;
+}
+
+.header .rectangle-18 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 200px;
+    position: absolute;
+    top: 208px;
+    width: 3px;
+}
+
+.header .rectangle-19 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 400px;
+    position: absolute;
+    top: 208px;
+    width: 3px;
+}
+
+.header .cup {
+    height: 58px;
+    left: 67px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 59px;
+}
+
+.header .text-wrapper-87 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    height: 59px;
+    justify-content: center;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: calc(100% - 543px);
+}
+
+.header .drupal {
+    color: var(--white);
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.7;
+    position: absolute;
+    top: 67px;
+    width: calc(100% - 436px);
+}
+
+.header .rectangle-20 {
+    background-color: #f14d34;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 32px;
+    width: 3px;
+}
+
+.header .line {
+    height: 3px;
+    left: 328px;
+    position: absolute;
+    top: 56px;
+    width: 140px;
+}
