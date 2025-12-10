@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 900px;
     margin: 80px auto;
+    margin-top: -140px; /* или меньше, например 20px */
 }
 
 .faq-title {
