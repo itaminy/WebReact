@@ -1,5 +1,16 @@
 import React from "react";
 import "./style.css";
+import support1 from "../../../../assets/img/support1.svg";
+import support2 from "../../../../assets/img/support2.svg";
+import support3 from "../../../../assets/img/support3.svg";
+import support4 from "../../../../assets/img/support4.svg";
+import support5 from "../../../../assets/img/support5.svg";
+import support6 from "../../../../assets/img/support6.svg";
+import support7 from "../../../../assets/img/support7.svg";
+import support8 from "../../../../assets/img/support8.svg";
+import laptop from "../../../../assets/img/laptop.png";
+import maskGroup from "../../../../assets/img/mask-group.png";
+
 
 export const Support = () => {
   return (
@@ -9,7 +20,7 @@ export const Support = () => {
       <img
         className="mask-group"
         alt="Mask group"
-        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/mask-group.png"
+        src={maskGroup}
       />
 
       <p className="text-wrapper-53">Экспертиза в Drupal, опыт 14 лет!</p>
@@ -17,7 +28,7 @@ export const Support = () => {
       <img
         className="laptop"
         alt="Laptop"
-        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/laptop.png"
+        src={laptop}
       />
 
       <div className="group-14">
@@ -64,7 +75,7 @@ export const Support = () => {
             <img
               className="img-2"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support8.svg"
+              src={support8}
             />
           </div>
 
@@ -84,7 +95,7 @@ export const Support = () => {
             <img
               className="img-3"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support7.svg"
+              src={support7}
             />
           </div>
 
@@ -92,7 +103,7 @@ export const Support = () => {
             <img
               className="img-4"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support6.svg"
+              src={support6}
             />
 
             <p className="text-wrapper-58">
@@ -113,7 +124,7 @@ export const Support = () => {
             <img
               className="img-5"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support5.svg"
+              src={support5}
             />
 
             <p className="text-wrapper-58">
@@ -130,7 +141,7 @@ export const Support = () => {
             <img
               className="img-6"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support4.svg"
+              src={support4}
             />
 
             <p className="text-wrapper-61">
@@ -148,7 +159,7 @@ export const Support = () => {
             <img
               className="img-7"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support3.svg"
+              src={support3}
             />
 
             <p className="text-wrapper-64">
@@ -170,7 +181,7 @@ export const Support = () => {
             <img
               className="img-7"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support2.svg"
+              src={support2}
             />
 
             <p className="text-wrapper-64">
@@ -190,7 +201,7 @@ export const Support = () => {
             <img
               className="img-4"
               alt="Support"
-              src="https://c.animaapp.com/mixkm5sjC7HSqN/img/support1.svg"
+              src={support1}
             />
 
             <p className="text-wrapper-67">

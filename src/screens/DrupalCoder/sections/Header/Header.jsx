@@ -2,57 +2,81 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./style.css";
 import 'animate.css';
+import cup from "../../../../assets/img/cup.png";
+import video from "../../../../assets/video/video.mp4";
+import druplicon from "../../../../assets/img/druplicon.svg";
+import drupalCoder from "../../../../assets/img/drupal-coder.svg";
+
 
 export const Header = ({ onOpenModal, onNavigate }) => {
     return (
         <header className="header" id="header">
             <video className="header-video" autoPlay loop muted playsInline>
-                <source src="https://cdn.coverr.co/videos/coverr-abstract-digital-background-9719/1080p.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
             <div className="header-overlay"></div>
-            <img
+            {/* <img
                 className="rectangle-13"
                 alt="Rectangle"
                 src="https://c.animaapp.com/mixkm5sjC7HSqN/img/rectangle-1.svg"
-            />
+            /> */}
 
-            <img
+            {/* <img
                 className="image-14"
                 alt="Image"
                 src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image.png"
-            />
+            /> */}
 
             <img
                 className="druplicon"
                 alt="Druplicon"
-                src="https://c.animaapp.com/mixkm5sjC7HSqN/img/druplicon.svg"
+                src={druplicon}
             />
 
             <div className="text-wrapper-74">8 800 222-26-73</div>
 
-            <div className="text-wrapper-75">RU</div>
+            <div className="menu-button lang">
+                RU
+                <div className="dropdown">
+                    <div>RU</div>
+                    <div>EN</div>
+                </div>
+            </div>
 
             <img
                 className="group-18"
                 alt="Group"
-                src="https://c.animaapp.com/mixkm5sjC7HSqN/img/group-9.png"
+                src={drupalCoder}
             />
 
+            {/* АДМИНИСТРИРОВАНИЕ */}
+            <div className="menu-button admin">
+                АДМИНИСТРИРОВАНИЕ
+                <div className="dropdown">
+                    <div>МИГРАЦИЯ</div>
+                    <div>БЭКАПЫ</div>
+                    <div>АУДИТ БЕЗОПАСНОСТИ</div>
+                    <div>ОПТИМИЗАЦИЯ СКОРОСТИ</div>
+                    <div>ПЕРЕЕЗД НА HTTPS</div>
+                </div>
+            </div>
+
+            {/* О НАС */}
+            <div className="menu-button about">
+                О НАС
+                <div className="dropdown">
+                    <div>КОМАНДА</div>
+                    <div>ВАКАНСИИ</div>
+                    <div>МИССИЯ</div>
+                </div>
+            </div>
             <div className="text-wrapper-76" onClick={() => onNavigate('support')}>ПОДДЕРЖКА САЙТОВ</div>
 
             <div className="text-wrapper-77" onClick={() => onNavigate('cases')}>НАШИ РАБОТЫ</div>
 
             <div className="text-wrapper-78" onClick={() => onNavigate('reviews')}>ОТЗЫВЫ</div>
 
-            <div className="text-wrapper-79" onClick={() => onNavigate('webform')}>КОНТАКТЫ</div>
-
             <div className="text-wrapper-80" onClick={() => onNavigate('plans')}>ТАРИФЫ</div>
-
-            <img
-                className="arrow-lang"
-                alt="Arrow lang"
-                src="https://c.animaapp.com/mixkm5sjC7HSqN/img/arrow-lang.svg"
-            />
 
             <div className="group-19">
                 <p className="CMS-drupal">
@@ -129,7 +153,7 @@ export const Header = ({ onOpenModal, onNavigate }) => {
                 <img
                     className="cup"
                     alt="Cup"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/cup.png"
+                    src={cup}
                 />
 
                 <div className="text-wrapper-87">#1</div>
@@ -142,11 +166,11 @@ export const Header = ({ onOpenModal, onNavigate }) => {
                 <div className="rectangle-20" />
             </div>
 
-            <img
+            {/* <img
                 className="line"
                 alt="Line"
                 src="https://c.animaapp.com/mixkm5sjC7HSqN/img/line.svg"
-            />
+            /> */}
         </header>
     );
 };

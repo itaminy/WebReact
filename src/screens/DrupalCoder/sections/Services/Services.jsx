@@ -1,5 +1,17 @@
 import React from "react";
 import "./style.css";
+import competency7 from "../../../../assets/img/competency-7.svg";
+import competency1 from "../../../../assets/img/competency-1.svg";
+import competency3 from "../../../../assets/img/competency-3.svg";
+import competency5 from "../../../../assets/img/competency-5.svg";
+import competency6 from "../../../../assets/img/competency-6.svg";
+import competency8 from "../../../../assets/img/competency-8.svg";
+import competency4 from "../../../../assets/img/competency-4.svg";
+import competency2 from "../../../../assets/img/competency-2.svg";
+
+import vector18 from "../../../../assets/img/vector-18.svg";
+
+
 
 export const Services = () => {
     return (
@@ -8,7 +20,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <div className="text-wrapper-70">
@@ -19,7 +31,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-7.svg"
+                    src={competency7}
                 />
             </div>
 
@@ -27,7 +39,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Icon bg"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <p className="text-wrapper-71">
@@ -37,7 +49,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-1.svg"
+                    src={competency1}
                 />
             </div>
 
@@ -45,7 +57,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <div className="text-wrapper-70">
@@ -53,70 +65,18 @@ export const Services = () => {
                     <br />и оптимизация модулей сайта
                 </div>
 
-                <div className="icons">
-                    <img
-                        className="rectangle-12"
-                        alt="Rectangle"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/rectangle.svg"
-                    />
-
-                    <img
-                        className="vector-10"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-11"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-12"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-13"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-14"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-15"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-16"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <img
-                        className="vector-17"
-                        alt="Vector"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-7.svg"
-                    />
-
-                    <div className="text-wrapper-72">CRM</div>
-                </div>
+                <img
+                    className="icons"
+                    alt="Icons"
+                    src={competency2}
+                />
             </div>
 
             <div className="adv-4">
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <p className="text-wrapper-71">
@@ -126,7 +86,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-3.svg"
+                    src={competency3}
                 />
             </div>
 
@@ -134,7 +94,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <p className="text-wrapper-70">
@@ -144,7 +104,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-5.svg"
+                    src={competency5}
                 />
             </div>
 
@@ -152,7 +112,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <p className="text-wrapper-70">
@@ -162,7 +122,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-6.svg"
+                    src={competency6}
                 />
             </div>
 
@@ -170,7 +130,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <p className="text-wrapper-70">
@@ -181,7 +141,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-8.svg"
+                    src={competency8}
                 />
             </div>
 
@@ -189,7 +149,7 @@ export const Services = () => {
                 <img
                     className="img-8"
                     alt="Vector"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector-18.svg"
+                    src={vector18}
                 />
 
                 <div className="text-wrapper-70">
@@ -200,7 +160,7 @@ export const Services = () => {
                 <img
                     className="icons"
                     alt="Icons"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/icons2-4.svg"
+                    src={competency4}
                 />
             </div>
 

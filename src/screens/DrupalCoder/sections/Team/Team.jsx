@@ -1,5 +1,12 @@
 import React from "react";
 import "./style.css";
+import image2472 from "../../../../assets/img/IMG_2472_0.jpg";
+import image2539 from "../../../../assets/img/IMG_2539_0.jpg";
+import image2474 from "../../../../assets/img/IMG_2474_1.jpg";
+import image2522 from "../../../../assets/img/IMG_2522_0.jpg";
+import image9971 from "../../../../assets/img/IMG_9971_16.jpg";
+import image6 from "../../../../assets/img/image6.png";
+
 
 export const Team = () => {
     return (
@@ -11,14 +18,14 @@ export const Team = () => {
                     <img
                         className="image-8"
                         alt="Image"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-3.png"
+                        src={image2472}
                     />
 
                     <div className="group-5">
-                        <div className="text-wrapper-16">Лёша</div>
+                        <div className="text-wrapper-16">Сергей Синица</div>
 
                         <div className="text-wrapper-17">
-                            руководитель поддержки, планирование задач
+                            Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора
                         </div>
                     </div>
                 </div>
@@ -26,57 +33,58 @@ export const Team = () => {
 
             <div className="div-wrapper">
                 <div className="group-6">
-                    <div className="text-wrapper-18">Сергей</div>
+                    <div className="text-wrapper-18">Роман Агабеков</div>
 
                     <p className="text-wrapper-19">
-                        технический директор, 14 лет опыт работы с Drupal
+                        Руководитель отдела DevOPS, директор
                     </p>
 
                     <img
                         className="image-9"
                         alt="Image"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-3.png"
+                        src={image2539}
                     />
                 </div>
             </div>
 
-            <div className="text-wrapper-20">Ирина</div>
+            <div className="text-wrapper-20">Алексей Синица</div>
 
             <p className="text-wrapper-21">
-                менеджер по работе
-                <br />с клинетами, организация оказания услуг
+                Руководитель отдела и поддержки сайтов
             </p>
 
             <img
                 className="image-10"
                 alt="Image"
-                src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-5-6.png"
+                src={image2474}
             />
 
             <div className="group-7">
                 <div className="group-8">
-                    <div className="text-wrapper-22">Даша</div>
+                    <div className="text-wrapper-22">Дарья Бочкарева</div>
 
-                    <div className="text-wrapper-23">SEO, веб-маркетинг</div>
+                    <div className="text-wrapper-23">Руководитель отдела продвижения, контекстной рекламы 
+                        и контент-поддержки сайтов
+                    </div>
 
                     <img
                         className="image-9"
                         alt="Image"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-5-6.png"
+                        src={image2522}
                     />
                 </div>
             </div>
 
             <div className="group-9">
                 <div className="group-8">
-                    <div className="text-wrapper-22">Роман</div>
+                    <div className="text-wrapper-22">Ирина Торкунова</div>
 
-                    <div className="text-wrapper-23">инфраструктура веб-проектов</div>
+                    <div className="text-wrapper-23">Менеджер по работе с клиенатми</div>
 
                     <img
                         className="image-9"
                         alt="Image"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-6-1.png"
+                        src={image9971}
                     />
                 </div>
             </div>
@@ -90,7 +98,7 @@ export const Team = () => {
                     <img
                         className="image-9"
                         alt="Image"
-                        src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-6-1.png"
+                        src={image6}
                     />
                 </div>
             </div>

@@ -329,6 +329,12 @@
     max-height: 29px;
 }
 
+/* Двигаем большие цифры ближе к линии */
+/* .header .text-wrapper-83,
+.header .text-wrapper-85 {
+    margin-left: -25px; 
+} */
+
 .header .text-wrapper-84 {
     color: var(--white);
     flex: 1;
@@ -530,4 +536,249 @@
     position: absolute;
     top: 56px;
     width: 140px;
+}
+
+
+/* === ОБЩИЙ СТИЛЬ НОВЫХ КНОПОК === */
+/* .header .menu-button {
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.72px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    top: 39px;
+    transition: all 0.25s ease;
+} */
+
+/* === ЛИНИЯ ПОД КНОПКОЙ ПРИ НАВЕДЕНИИ === */
+.header .menu-button:hover {
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .menu-button:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: #f14d34;
+}
+
+/* === ВЫПАДАЮЩИЕ СПИСКИ === */
+.header .menu-button .dropdown {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    background: #f14d34;
+    padding: 10px 14px;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+}
+
+.header .menu-button:hover .dropdown {
+    display: flex;
+}
+
+.header .menu-button .dropdown div {
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .menu-button .dropdown div:hover {
+    opacity: 0.8;
+}
+
+/* === РАСПОЛОЖЕНИЕ НОВЫХ КНОПОК === */
+/* подгони значения left под свой макет */
+/* .header .admin   { left: calc(50% + 90px); }  
+.header .about   { left: calc(50% + 270px); }
+.header .projects{ left: calc(50% + 360px); }
+.header .reklama { left: calc(50% + 460px); } */
+
+/* =========================
+   MENU: unified hover line
+   ========================= */
+
+/* Убедимся, что все меню-кнопки и текстовые wrapper'ы ведут себя одинаково */
+.header .text-wrapper-76,
+.header .text-wrapper-77,
+.header .text-wrapper-78,
+.header .text-wrapper-79,
+.header .text-wrapper-80,
+.header .menu-button,
+.header .menu-item {
+    position: absolute;       /* сохраняем абсолютное позиционирование как у тебя */
+    top: 39px;                /* ровняем по одной линии */
+    color: #ffffff;
+    font-family: "Ubuntu", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.72px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.22s ease, transform 0.22s ease;
+    display: inline-flex;     /* чтобы содержимое (текст + стрелка) было центрировано */
+    align-items: center;
+    height: 22px;             /* фиксированная высота для ровного выравнивания */
+    line-height: 1;           
+}
+
+/* Универсальное поведение при hover — цвет + лёгкий подъём */
+.header .text-wrapper-76:hover,
+.header .text-wrapper-77:hover,
+.header .text-wrapper-78:hover,
+.header .text-wrapper-79:hover,
+.header .text-wrapper-80:hover,
+.header .menu-button:hover,
+.header .menu-item:hover {
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+/* Динамическая красно-оранжевая линия — псевдоэлемент, одинаково для всех */
+.header .text-wrapper-76::after,
+.header .text-wrapper-77::after,
+.header .text-wrapper-78::after,
+.header .text-wrapper-79::after,
+.header .text-wrapper-80::after,
+.header .menu-button::after,
+.header .menu-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;         /* где показывать линию относительно кнопки */
+    width: 0;             /* по умолчанию скрыта */
+    height: 3px;
+    background: linear-gradient(90deg,#f14d34,#ff8a00);
+    transition: width 0.18s cubic-bezier(.2,.9,.2,1);
+    pointer-events: none;
+}
+
+/* при hover растягиваем линию по ширине текста */
+.header .text-wrapper-76:hover::after,
+.header .text-wrapper-77:hover::after,
+.header .text-wrapper-78:hover::after,
+.header .text-wrapper-79:hover::after,
+.header .text-wrapper-80:hover::after,
+.header .menu-button:hover::after,
+.header .menu-item:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   Dropdown (выпадающие списки)
+   ========================= */
+
+/* Родительская кнопка должна иметь класс .menu-button (например: <div class="menu-button admin">) */
+.header .menu-button {
+    z-index: 50; /* чтобы кнопка была над фоном и рядом стоящими элементами */
+}
+
+/* Сам выпадающий список — абсолютный, не влияет на поток */
+.header .menu-button .dropdown {
+    position: absolute;
+    top: calc(100% + 8px);    /* появляется ниже кнопки, не сдвигая её */
+    left: 0;
+    display: none;            /* показывается только на hover */
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 12px;
+    background: #f14d34;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    min-width: 180px;
+    z-index: 9999;            /* над всеми */
+}
+
+/* Показываем dropdown при hover родителя */
+.header .menu-button:hover .dropdown {
+    display: flex;
+}
+
+/* Элементы выпадающего списка */
+.header .menu-button .dropdown div {
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.header .menu-button .dropdown div:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   Позиционирование кнопок (подгони по макету)
+   ========================= */
+
+/* Примерные left; подгони под свой макет — эти значения безопасно разместят кнопки */
+.header .text-wrapper-76 { left: calc(50% - 392px); } /* Поддержка - уже было */
+.header .text-wrapper-77 { left: calc(50% - 135px); } /* Наши работы */
+.header .text-wrapper-78 { left: calc(50% - 7px); }   /* Отзывы */
+.header .text-wrapper-79 { left: calc(50% + 79px); }  /* Контакты */
+.header .text-wrapper-80 { left: calc(50% - 221px); } /* Тарифы */
+
+/* Новые/добавленные кнопки — подгони числа если нужно */
+.header .menu-button.admin    { left: calc(50% + 70px); }  /* Администрирование — можно уменьшить, если мешает */
+.header .menu-button.about    { left: calc(50% + 250px); } /* О нас */
+.header .menu-item.projects   { left: calc(50% + 350px); } /* Проекты */
+.header .menu-item.reklama    { left: calc(50% + 430px); } /* Реклама */
+
+/* Защитные правила: не позволяем dropdown менять позицию кнопки */
+.header .menu-button,
+.header .text-wrapper-76,
+.header .text-wrapper-77,
+.header .text-wrapper-78,
+.header .text-wrapper-79,
+.header .text-wrapper-80 {
+    margin: 0;
+    padding: 0;
+}
+
+/* === Языковой переключатель === */
+
+.header .menu-button.lang {
+    right: 151px;     /* там где у тебя стоял RU */
+    top: 37px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Делаем dropdown меньше, чем у админки — под язык */
+.header .menu-button.lang .dropdown {
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 60px;
+    padding: 8px 10px;
+    gap: 4px;
+}
+
+.header .menu-button.lang .dropdown div {
+    font-size: 13px;
+    padding: 4px 2px;
+}
+
+/* Подсветка + линия при hover (как у всех меню) */
+.header .menu-button.lang:hover {
+    color: #f14d34;
+    transform: translateY(-2px);
+}
+
+.header .menu-button.lang::after {
+    bottom: -4px;
+}
+
+.header .menu-button.lang:hover::after {
+    width: 100%;
 }

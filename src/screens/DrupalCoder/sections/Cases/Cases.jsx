@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./style.css";
+import image612 from "../../../../assets/img/image-6-1-2.png";
+import image711 from "../../../../assets/img/image-7-1-1.png";
+import image811 from "../../../../assets/img/image-8-1-1.png";
+import image911 from "../../../../assets/img/image-9-1-1.png";
+import image1012 from "../../../../assets/img/image-10-1-2.png";
+import image1111 from "../../../../assets/img/image-11-1-1.png";
 
 const additionalCases = [
     {
@@ -8,21 +14,21 @@ const additionalCases = [
         title: "Интеграция с CRM системой",
         date: "15.03.2019",
         description: "Полная интеграция сайта с корпоративной CRM системой для автоматизации бизнес-процессов.",
-        images: ["https://c.animaapp.com/mixkm5sjC7HSqN/img/image-6-1-2.png"]
+        images: [image612]
     },
     {
         id: 2,
         title: "Редизайн корпоративного портала",
         date: "10.02.2019",
         description: "Современный дизайн и улучшенная навигация для корпоративного портала компании.",
-        images: ["https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"]
+        images: [image711]
     },
     {
         id: 3,
         title: "Оптимизация производительности",
         date: "05.01.2019",
         description: "Ускорение загрузки сайта в 3 раза через оптимизацию кода и настройку кэширования.",
-        images: ["https://c.animaapp.com/mixkm5sjC7HSqN/img/image-8-1-1.png"]
+        images: [image811]
     }
 ];
 
@@ -48,25 +54,25 @@ export const Cases = () => {
                 <img
                     className="image-11"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-6-1-2.png"
+                    src={image612}
                 />
 
                 <img
                     className="image-11"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"
+                    src={image711}
                 />
 
                 <img
                     className="image-11"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-8-1-1.png"
+                    src={image811}
                 />
 
                 <img
                     className="image-11"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-9-1-1.png"
+                    src={image911}
                 />
             </div>
 
@@ -87,7 +93,7 @@ export const Cases = () => {
                 <img
                     className="image-11"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-6-1-2.png"
+                    src={image612}
                 />
             </div>
 
@@ -95,13 +101,13 @@ export const Cases = () => {
                 <img
                     className="image-12"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"
+                    src={image711}
                 />
 
                 <img
                     className="image-12"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-8-1-1.png"
+                    src={image811}
                 />
 
                 <div className="rectangle-5" />
@@ -117,7 +123,7 @@ export const Cases = () => {
                 <img
                     className="image-12"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"
+                    src={image711}
                 />
 
                 <div className="rectangle-5" />
@@ -143,31 +149,31 @@ export const Cases = () => {
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"
+                    src={image711}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-8-1-1.png"
+                    src={image811}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-9-1-1.png"
+                    src={image911}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-10-1-2.png"
+                    src={image1012}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-11-1-1.png"
+                    src={image1111}
                 />
 
                 <div className="rectangle-6" />
@@ -181,25 +187,25 @@ export const Cases = () => {
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-7-1-1.png"
+                    src={image711}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-8-1-1.png"
+                    src={image811}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-9-1-1.png"
+                    src={image911}
                 />
 
                 <img
                     className="image-13"
                     alt="Image"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/image-10-1-2.png"
+                    src={image1012}
                 />
 
                 <div className="rectangle-6" />

@@ -11,6 +11,8 @@ import { Webform } from "./sections/Webform";
 import { Modal } from "./components/Modal";
 import "./style.css";
 
+import D from "../../assets/img/D.svg"
+
 export const DrupalCoder = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,7 +36,7 @@ export const DrupalCoder = () => {
                 <img
                     className="d-background"
                     alt="D background"
-                    src="https://c.animaapp.com/mixkm5sjC7HSqN/img/d-background.svg"
+                    src={D}
                 />
                 <img
                     className="rectangle-21"

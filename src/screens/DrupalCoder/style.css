@@ -15,8 +15,18 @@
     transition: transform 0.3s ease;
 }
 
-.drupal-coder img:hover {
+.header img:hover,
+.plans img:hover {
     transform: scale(1.05);
+}
+
+.plans {
+    position: relative;
+    z-index: 10;
+}
+
+.d-2 {
+    z-index: 0 !important;
 }
 
 .drupal-coder .d-2 {
