@@ -9,6 +9,7 @@ import { Support } from "./sections/Support";
 import { Team } from "./sections/Team";
 import { Webform } from "./sections/Webform";
 import { Modal } from "./components/Modal";
+import { Faq } from "./sections/Faq";
 import "./style.css";
 
 import D from "../../assets/img/D.svg"
@@ -48,6 +49,7 @@ export const DrupalCoder = () => {
             <Team />
             <Reviews />
             <Partners />
+            <Faq />
             <Webform />
             <Modal isOpen={isModalOpen} onClose={closeModal} />
         </div>

@@ -217,7 +217,7 @@ export const Cases = () => {
 
             <div className="text-wrapper-30">Последние кейсы</div>
 
-            {showMore && (
+            {/* {showMore && (
                 <>
                     {additionalCases.map((caseItem, index) => (
                         <motion.div
@@ -239,7 +239,7 @@ export const Cases = () => {
                         </motion.div>
                     ))}
                 </>
-            )}
+            )} */}
 
             <motion.div
                 className="button-primary-2"
