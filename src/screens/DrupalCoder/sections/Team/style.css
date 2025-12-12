@@ -235,3 +235,21 @@
     top: 587px;
     width: 280px;
 }
+
+.team-show-more-btn {
+    margin: 40px auto 0;
+    padding: 12px 28px;
+    width: fit-content;
+    border: 2px solid #f14d34;
+    border-radius: 6px;
+    color: #f14d34;
+    font-size: 14px;
+    font-family: "Montserrat", Helvetica;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.team-show-more-btn:hover {
+    background: #f14d34;
+    color: #fff;
+}

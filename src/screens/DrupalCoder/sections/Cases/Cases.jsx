@@ -241,7 +241,7 @@ export const Cases = () => {
                 </>
             )} */}
 
-            <motion.div
+            {/* <motion.div
                 className="button-primary-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -249,7 +249,7 @@ export const Cases = () => {
                 style={{ cursor: 'pointer' }}
             >
                 <div className="text-wrapper-31">{showMore ? 'СКРЫТЬ' : 'ПОКАЗАТЬ ЕЩЁ'}</div>
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };

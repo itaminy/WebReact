@@ -9,7 +9,7 @@ import intel from "../../../../assets/img/intel.png";
 export const Partners = () => {
     const logos = [ibm, aecom, amd, docker, intel];
 
-    const fullList = [...logos, ...logos, ...logos]; 
+    const fullList = [...logos, ...logos, ...logos, ...logos, ...logos]; 
     // 3 раза — чтобы точно заполнить ширину на любых мониторах
 
     return (

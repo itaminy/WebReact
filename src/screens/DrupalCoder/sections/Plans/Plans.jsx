@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./style.css";
 
+import D from "../../../../assets/img/D.svg"
+
 export const Plans = ({ onOpenModal }) => {
     return (
         <div className="plans" id="plans">
@@ -217,6 +219,10 @@ export const Plans = ({ onOpenModal }) => {
                     alt="Vector"
                     src="https://c.animaapp.com/mixkm5sjC7HSqN/img/vector.svg"
                 />
+            </div>
+
+            <div className="plans-d-bg">
+                <img src={D} alt="D background" />
             </div>
 
             <motion.div

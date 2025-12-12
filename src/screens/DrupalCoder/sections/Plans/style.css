@@ -608,3 +608,36 @@
     white-space: nowrap;
     width: 279px;
 }
+
+
+.plans {
+    position: relative;
+    overflow: visible;
+}
+
+/* Все элементы тарифов поверх фона */
+.plans > * {
+    position: relative;
+    z-index: 5;
+}
+
+/* Фоновая D всегда под тарифами */
+.plans .plans-d-bg {
+    z-index: 1;
+    position: absolute;
+}
+
+.plans-d-bg {
+    position: absolute;
+    top: -160px;      /* подгони по макету */
+    right: -350px;   /* подгони */
+    width: 900px;    /* можно изменить */
+    /* opacity: 0.2; */
+    z-index: 1;
+}
+
+.plans-d-bg img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}

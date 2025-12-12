@@ -554,20 +554,6 @@
 } */
 
 /* === ЛИНИЯ ПОД КНОПКОЙ ПРИ НАВЕДЕНИИ === */
-.header .menu-button:hover {
-    color: #f14d34;
-    transform: translateY(-2px);
-}
-
-.header .menu-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 3px;
-    background: #f14d34;
-}
 
 /* === ВЫПАДАЮЩИЕ СПИСКИ === */
 .header .menu-button .dropdown {
@@ -583,9 +569,6 @@
     z-index: 9999;
 }
 
-.header .menu-button:hover .dropdown {
-    display: flex;
-}
 
 .header .menu-button .dropdown div {
     font-size: 12px;
@@ -700,9 +683,6 @@
 }
 
 /* Показываем dropdown при hover родителя */
-.header .menu-button:hover .dropdown {
-    display: flex;
-}
 
 /* Элементы выпадающего списка */
 .header .menu-button .dropdown div {
@@ -782,3 +762,37 @@
 .header .menu-button.lang:hover::after {
     width: 100%;
 }
+
+.menu-button.open .dropdown {
+    display: block !important;
+}
+
+.menu-button .dropdown {
+    display: none;
+}
+
+.menu-button .arrow {
+    margin-left: 6px;
+    font-size: 7px;
+    pointer-events: none;
+}
+
+.header-top {
+    position: absolute;
+    top: 34px;        /* выравнивает с логотипом */
+    left: 130px;
+    right: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-top .top-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+

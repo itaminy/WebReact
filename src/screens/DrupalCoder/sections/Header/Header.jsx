@@ -9,6 +9,20 @@ import drupalCoder from "../../../../assets/img/drupal-coder.svg";
 
 
 export const Header = ({ onOpenModal, onNavigate }) => {
+    const [openMenu, setOpenMenu] = React.useState(null); 
+    // null | "admin" | "about" | "lang"
+
+    // закрытие по клику мимо меню
+    React.useEffect(() => {
+        const close = (e) => {
+            if (!e.target.closest(".menu-button")) {
+                setOpenMenu(null);
+            }
+        };
+        document.addEventListener("click", close);
+        return () => document.removeEventListener("click", close);
+    }, []);
+
     return (
         <header className="header" id="header">
             <video className="header-video" autoPlay loop muted playsInline>
@@ -33,15 +47,25 @@ export const Header = ({ onOpenModal, onNavigate }) => {
                 src={druplicon}
             />
 
-            <div className="text-wrapper-74">8 800 222-26-73</div>
+            {/* <div className="text-wrapper-74">8 800 222-26-73</div> */}
 
-            <div className="menu-button lang">
-                RU
-                <div className="dropdown">
-                    <div>RU</div>
-                    <div>EN</div>
-                </div>
-            </div>
+            {/* <div
+                className={`menu-button lang ${openMenu === "lang" ? "open" : ""}`}
+                style={{ top: "34px" }}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenMenu(openMenu === "lang" ? null : "lang");
+                }}
+            >
+                RU <span className="arrow">▼</span>
+
+                {openMenu === "lang" && (
+                    <div className="dropdown">
+                        <div>RU</div>
+                        <div>EN</div>
+                    </div>
+                )}
+            </div> */}
 
             <img
                 className="group-18"
@@ -49,34 +73,54 @@ export const Header = ({ onOpenModal, onNavigate }) => {
                 src={drupalCoder}
             />
 
-            {/* АДМИНИСТРИРОВАНИЕ */}
-            <div className="menu-button admin">
-                АДМИНИСТРИРОВАНИЕ
-                <div className="dropdown">
-                    <div>МИГРАЦИЯ</div>
-                    <div>БЭКАПЫ</div>
-                    <div>АУДИТ БЕЗОПАСНОСТИ</div>
-                    <div>ОПТИМИЗАЦИЯ СКОРОСТИ</div>
-                    <div>ПЕРЕЕЗД НА HTTPS</div>
-                </div>
+            <div
+                className={`menu-button admin ${openMenu === "admin" ? "open" : ""}`}
+                style={{ top: "34px" }}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenMenu(openMenu === "admin" ? null : "admin");
+                }}
+            >
+                АДМИНИСТРИРОВАНИЕ <span className="arrow">▼</span>
+
+                {openMenu === "admin" && (
+                    <div className="dropdown">
+                        <div>МИГРАЦИЯ</div>
+                        <div>БЭКАПЫ</div>
+                        <div>АУДИТ БЕЗОПАСНОСТИ</div>
+                        <div>ОПТИМИЗАЦИЯ СКОРОСТИ</div>
+                        <div>ПЕРЕЕЗД НА HTTPS</div>
+                    </div>
+                )}
             </div>
 
             {/* О НАС */}
-            <div className="menu-button about">
-                О НАС
-                <div className="dropdown">
-                    <div>КОМАНДА</div>
-                    <div>ВАКАНСИИ</div>
-                    <div>МИССИЯ</div>
-                </div>
+            <div
+                className={`menu-button about ${openMenu === "about" ? "open" : ""}`}
+                style={{ top: "34px" }}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setOpenMenu(openMenu === "about" ? null : "about");
+                }}
+            >
+                О НАС <span className="arrow">▼</span>
+
+                {openMenu === "about" && (
+                    <div className="dropdown">
+                        <div>КОМАНДА</div>
+                        <div>ВАКАНСИИ</div>
+                        <div>МИССИЯ</div>
+                    </div>
+                )}
             </div>
-            <div className="text-wrapper-76" onClick={() => onNavigate('support')}>ПОДДЕРЖКА САЙТОВ</div>
 
-            <div className="text-wrapper-77" onClick={() => onNavigate('cases')}>НАШИ РАБОТЫ</div>
+            <div className="text-wrapper-76" style={{ top: "34px" }} onClick={() => onNavigate('support')}>ПОДДЕРЖКА САЙТОВ</div>
 
-            <div className="text-wrapper-78" onClick={() => onNavigate('reviews')}>ОТЗЫВЫ</div>
+            <div className="text-wrapper-77" style={{ top: "34px" }} onClick={() => onNavigate('cases')}>НАШИ РАБОТЫ</div>
 
-            <div className="text-wrapper-80" onClick={() => onNavigate('plans')}>ТАРИФЫ</div>
+            <div className="text-wrapper-78" style={{ top: "34px" }} onClick={() => onNavigate('reviews')}>ОТЗЫВЫ</div>
+
+            <div className="text-wrapper-80" style={{ top: "34px" }} onClick={() => onNavigate('plans')}>ТАРИФЫ</div>
 
             <div className="group-19">
                 <p className="CMS-drupal">
