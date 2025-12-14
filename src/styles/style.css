@@ -777,6 +777,7 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 20;
+    
     background: rgba(5, 8, 22, 0.9);
     backdrop-filter: blur(16px);
 }
@@ -1117,6 +1118,13 @@ body {
 .header {
   position: relative;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: static;   /* 🔥 ГЛАВНОЕ */
+    height: auto;
+  }
 }
 
 .header img {
@@ -2787,78 +2795,323 @@ section {
 }
 
 /* =========================
-   HERO — MOBILE (≤768px)
+   HERO STATS — MOBILE
 ========================= */
+@media (max-width: 768px) {
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+    margin-top: 48px;
+    text-align: left;
+  }
+
+  .hero-stats__item {
+    padding-left: 14px;
+  }
+
+  .hero-stats__item::before {
+    left: 0;
+    width: 3px;
+  }
+
+  .hero-stats__num {
+    font-size: 26px;
+  }
+
+  .hero-stats__text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* последний элемент — на всю ширину */
+  .hero-stats__item:last-child {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 768px) {
 
   .hero {
     padding: 96px 16px 64px;
-    min-height: auto;
     text-align: center;
   }
 
-  .hero .container {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  /* Заголовок */
-  .hero h1 {
+  .hero__title {
     font-size: 28px;
     line-height: 1.25;
     margin-bottom: 16px;
   }
 
-  /* Описание */
-  .hero p {
+  .hero__subtitle {
     font-size: 14px;
     line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
+    max-width: 320px;
   }
 
-  /* Кнопка ТАРИФЫ */
-  .hero .btn,
-  .hero button {
+  .hero__btn-outline {
     width: 100%;
     max-width: 280px;
-    margin: 0 auto 48px;
-    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* =========================
+   HEADER MOBILE
+========================= */
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 1000;
+    background: linear-gradient(180deg, #0c1020 0%, #070a14 100%);
+}
+
+
+
+  .header__inner {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  /* ====== СТАТИСТИКА ====== */
-  .hero__stats {
+  /* скрываем меню */
+  .header__nav {
+    display: none !important;
+  }
+
+  /* бургер показываем */
+  .header__burger {
+    display: flex;
+  }
+
+  /* логотип меньше */
+  .header__logo img {
+    height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px 24px;
-    text-align: left;
   }
 
-  .hero__stat {
+  .hero-stats__item:nth-child(1) { order: 1; } /* #1 */
+  .hero-stats__item:nth-child(2) { order: 2; } /* 3+ */
+  .hero-stats__item:nth-child(3) { order: 3; } /* 14 */
+  .hero-stats__item:nth-child(4) { order: 4; } /* 50+ */
+  .hero-stats__item:nth-child(5) { 
+    order: 5; 
+    grid-column: span 1;          /* 90 000+ */
+  }
+  .hero-stats__item:nth-child(6) { 
+    order: 6; 
+    grid-column: span 1;          /* 300+ */
+  }
+}
+
+.header__burger {
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+}
+
+.header__burger:focus,
+.header__burger:active {
+  background: transparent !important;
+  outline: none;
+}
+
+/* =========================
+   SERVICES — MOBILE (2 COLS)
+========================= */
+@media (max-width: 768px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🔥 2 столбика */
+    gap: 32px 24px;
+  }
+
+  .service-item {
+    max-width: none;
+  }
+
+  .service-text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .service-icon-wrap {
+    width: 72px;
+    height: 72px;
+  }
+
+  .service-icon--large {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* ВЕСЬ БЛОК: СНАЧАЛА ТЕКСТ, ПОТОМ КАРТИНКА */
+  .support-exp__bottom {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    position: relative;
-    padding-left: 14px;
+    gap: 32px;
+    padding-bottom: 220px; /* место под ноутбук */
   }
 
-  .hero__stat::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
+  /* ИНФО СВЕРХУ */
+  .support-exp__info {
+    order: 1;
+    padding: 0 16px;
+  }
+
+  .support-exp__info-title {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  /* СПИСОК В ОДИН СТОЛБИК */
+  .support-exp__info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .support-exp__info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .support-exp__info-line {
+    flex-shrink: 0;
     width: 3px;
+    min-height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+  }
+
+  .support-exp__info-text {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  .support-exp__image-wrap {
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    pointer-events: none;
+  }
+
+  .support-exp__image {
+    position: relative;
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .support-exp__bg-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tariffs__cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tariff-card--primary {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tariffs__bg-icon {
+    position: absolute;
+
+    /* ⛔️ СБРОС СТАРЫХ ПРАВИЛ */
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    /* ✅ НОВАЯ ЛОГИКА */
+    inset: 0;
+    width: 100%;
     height: 100%;
-    background: #f14d34;
+
+    object-fit: cover;
+    opacity: 0.08;
+
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services__title-left span {
+    white-space: normal !important;
   }
 
-  .hero__stat-value {
-    font-size: 28px;
-    font-weight: 700;
+  .services__title-left {
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .hero__stat-text {
-    font-size: 13px;
-    opacity: 0.8;
+  .service-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

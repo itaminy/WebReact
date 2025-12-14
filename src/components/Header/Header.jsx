@@ -85,7 +85,8 @@ export default function Header() {
           BURGER (mobile)
           <button
             className="header__burger"
-            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Открыть меню"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             <span />
             <span />

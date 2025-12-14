@@ -1,10 +1,16 @@
 .mobile-menu {
   position: fixed;
-  inset: 0;
+  inset: 0;                /* 🔥 занимает весь экран */
   background: radial-gradient(circle at top, #111428 0%, #05060f 70%);
   color: #fff;
   z-index: 9999;
   overflow-y: auto;
+}
+
+
+
+html, body {
+  overflow-x: hidden;
 }
 
 .mobile-menu__header {
@@ -16,6 +22,7 @@
   line-height: 1.25;
   font-weight: 700;
   margin-bottom: 12px;
+  margin-top: 70px;
 }
 
 .mobile-menu__header p {
