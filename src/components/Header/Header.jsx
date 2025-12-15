@@ -82,7 +82,7 @@ export default function Header() {
             <a className="header__link">Контакты</a>
           </nav>
 
-          BURGER (mobile)
+          {/* BURGER (mobile) */}
           <button
             className="header__burger"
             aria-label="Открыть меню"
@@ -93,6 +93,8 @@ export default function Header() {
             <span />
           </button>
         </div>
+
+        
       </header>
 
       {/* MOBILE MENU */}

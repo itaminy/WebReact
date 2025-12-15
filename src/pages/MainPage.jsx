@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from "react";
+
+import { WebformModal } from "../components/WebformModal/WebformModal";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import Services from "../components/Services/Services";
@@ -14,10 +17,12 @@ import MidServices from "../components/MidServices/MidServices"
 import Cases from "../components/Cases/Cases"
 
 export default function MainPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  
   return (
     <>
       <Header />
-      <Hero />
+      <Hero onOpenModal={() => setIsFormOpen(true)} />
       <Services />
       <Support/>
       <Tariffs/>
@@ -28,7 +33,10 @@ export default function MainPage() {
       <Partners />
       <Faq />
       <ContactForm />
-      
+      <WebformModal
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </>
   );
 }

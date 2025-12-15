@@ -46,7 +46,7 @@ export default function Hero({ onOpenModal }) {
               className="btn btn--outline hero__btn-outline"
               onClick={onOpenModal}
             >
-              Тарифы
+              Связь с нами
             </button>
           </div>
         </div>

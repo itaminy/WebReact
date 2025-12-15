@@ -21,17 +21,6 @@ export default function Footer() {
             Dries Buytaert.
           </p>
         </div>
-
-        {/* RIGHT */}
-        <div className="footer-right">
-          {/* DD logo */}
-          <div className="footer-dd">
-            <span>D</span>
-            <span>D</span>
-          </div>
-
-        </div>
-
       </div>
     </footer>
   );

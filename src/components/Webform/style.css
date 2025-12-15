@@ -1,0 +1,417 @@
+.webform {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(9, 12, 32, 0.92) 0%,
+            rgba(4, 6, 19, 1) 100%
+        );
+    height: 816px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.webform .d-flying {
+    height: 229px;
+    left: 583px;
+    position: absolute;
+    top: 0;
+    width: 289px;
+}
+
+.webform .d {
+    height: 213px;
+    left: 974px;
+    position: absolute;
+    top: 603px;
+    width: 466px;
+}
+
+.webform .contacts {
+    display: flex;
+    flex-direction: column;
+    height: 439px;
+    left: 130px;
+    position: absolute;
+    top: 117px;
+    width: 480px;
+}
+
+.webform .text-wrapper {
+    color: #ffffff;
+    font-family: var(--titles-h2-font-family);
+    font-size: var(--titles-h2-font-size);
+    font-style: var(--titles-h2-font-style);
+    font-weight: var(--titles-h2-font-weight);
+    height: 102px;
+    letter-spacing: var(--titles-h2-letter-spacing);
+    line-height: var(--titles-h2-line-height);
+}
+
+.webform .div {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    height: 88px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-top: 19px;
+    opacity: 0.7;
+}
+
+.webform .phone {
+    display: flex;
+    gap: 18px;
+    margin-left: 2px;
+    margin-top: 142px;
+    width: 307px;
+}
+
+.webform .phone-line {
+    background-image: url(https://c.animaapp.com/mixkm5sjC7HSqN/img/phone.svg);
+    background-size: 100% 100%;
+    height: 24px;
+    margin-top: 12px;
+    opacity: 0.5;
+    width: 24px;
+}
+
+.webform .text-wrapper-2 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: 48px;
+    white-space: nowrap;
+    width: 263px;
+}
+
+.webform .mail {
+    display: flex;
+    gap: 16px;
+    margin-top: 5px;
+    width: 249px;
+}
+
+.webform .mail-2 {
+    background-image: url(https://c.animaapp.com/mixkm5sjC7HSqN/img/mail.svg);
+    background-size: 100% 100%;
+    height: 24px;
+    margin-top: 2px;
+    opacity: 0.5;
+    width: 28px;
+}
+
+.webform .text-wrapper-3 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    height: 27px;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: 27px;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: 203px;
+}
+
+.webform .footer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    height: 150px;
+    left: 0;
+    position: absolute;
+    top: 666px;
+    width: 1441px;
+}
+
+.webform .vector {
+    height: 1px;
+    margin-top: 0;
+    object-fit: cover;
+    width: 1441px;
+}
+
+.webform .group {
+    height: 40px;
+    margin-left: 130px;
+    position: relative;
+    width: 526px;
+}
+
+.webform .p {
+    color: var(--white);
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: calc(50.00% - 20px);
+    width: 421px;
+}
+
+.webform .text-wrapper-4 {
+    color: var(--white);
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: calc(50.00% + 3px);
+    width: 522px;
+}
+
+.webform .form {
+    height: 478px;
+    left: 830px;
+    position: absolute;
+    top: 117px;
+    width: 480px;
+}
+
+.webform .input-empty {
+    height: 67px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.webform .form-input {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.webform .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.webform .form-input:focus {
+    outline: none;
+    border-color: #f14d34;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.webform .form-input.error {
+    border-color: #ff4444;
+}
+
+.webform .input-empty-2 {
+    height: 67px;
+    left: 0;
+    position: absolute;
+    top: 75px;
+    width: 100%;
+}
+
+.webform .input-empty-3 {
+    height: 67px;
+    left: 0;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+}
+
+.webform .input-empty-4 {
+    height: 127px;
+    left: 0;
+    position: absolute;
+    top: 225px;
+    width: 100%;
+}
+
+.webform .form-textarea {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.webform .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.webform .form-textarea:focus {
+    outline: none;
+    border-color: #f14d34;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.webform .checkbox-wrapper {
+    display: flex;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 367px;
+    width: 466px;
+}
+
+.webform .checkbox {
+    display: flex;
+    gap: 13px;
+    width: 468px;
+}
+
+.webform .checked-icon {
+    height: 25px;
+    margin-top: 3px;
+    width: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.webform .checked-icon.checked {
+    background: #f14d34;
+    border-color: #f14d34;
+}
+
+.webform .error-text-inline {
+    color: #ff4444;
+    font-size: 11px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+.webform .success-banner {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    background: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.webform .text-wrapper-7 {
+    align-self: center;
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 428px;
+}
+
+.webform .button-primary {
+    align-items: center;
+    background-color: var(--icons-1);
+    border-radius: 5px;
+    bottom: 0;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.webform .button-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.webform .text-wrapper-8 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-family: "Montserrat", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    height: 12px;
+    justify-content: center;
+    letter-spacing: 0.72px;
+    line-height: 12px;
+    text-align: center;
+    white-space: nowrap;
+    width: 138px;
+}
+
+/* ===== FLOATING LABELS ===== */
+
+.form-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.form-field.textarea .form-label {
+  top: 24px;
+  transform: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label,
+.form-textarea:focus + .form-label,
+.form-textarea:not(:placeholder-shown) + .form-label {
+  top: 8px;
+  font-size: 11px;
+  color: #f14d34;
+}
+
+.form-input,
+.form-textarea {
+  padding-top: 30px;
+}
