@@ -6,6 +6,6 @@ import { screenGraphPlugin } from "@animaapp/vite-plugin-screen-graph";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
     plugins: [react(), mode === "development" && screenGraphPlugin()],
-    publicDir: "./static",
+    // publicDir: "./static",
     base: "/WebReact/",
 }));
