@@ -3151,14 +3151,14 @@ section {
   .testimonial-card.background-1,
 .testimonial-card.background-2 {
   position: absolute;
-  top: 0;
+  top: 17%;
   left: 0;
   right: 0;
 
   margin: 0 auto;              /* ⬅️ центр строго по основной */
   width: 90%;
   max-width: 360px;
-  height: 100%;
+  height: 70%;
 
   border-radius: 6px;
   background: #f2f2f2;
